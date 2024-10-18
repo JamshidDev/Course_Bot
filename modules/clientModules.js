@@ -153,10 +153,8 @@ bot.use(orderCourseButton)
 
 
 bot.command("start", async (ctx) => {
-    let lang = await ctx.i18n.getLocale();
-    if (!i18n.locales.includes(lang)) {
-        await ctx.i18n.setLocale("uz");
-    }
+    await ctx.i18n.setLocale("uz");
+
     let user = await check_user(ctx.from.id);
     data = {
         user_id: ctx.from.id,
@@ -165,15 +163,14 @@ bot.command("start", async (ctx) => {
         active: true
     }
     if (user) {
-        await ctx.i18n.setLocale(user.lang);
-        data.lang = user.lang;
+        await ctx.i18n.setLocale('uz');
+        data.lang = 'uz';
         await register_user(data);
     } else {
         lang = await ctx.i18n.getLocale()
-        data.lang = lang;
+        data.lang = 'uz';
         await register_user(data);
     }
-    console.log(ctx.from.id)
     await ctx.conversation.enter("mainConversation");
 
 })
