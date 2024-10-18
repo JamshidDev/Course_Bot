@@ -2,6 +2,7 @@ const { Composer, MemorySessionStorage, session } = require("grammy");
 const { Menu, MenuRange } = require("@grammyjs/menu");
 const { I18n, hears } = require("@grammyjs/i18n");
 const { chatMembers } = require("@grammyjs/chat-members");
+const i18n = require("../utils/i18n")
 const {
     conversations,
 } = require("@grammyjs/conversations");
@@ -10,15 +11,6 @@ const channelController = require("../controllers/channelController")
 const adapter = new MemorySessionStorage();
 
 const bot = new Composer();
-
-const i18n = new I18n({
-    defaultLocale: "uz",
-    useSession: true,
-    directory: "locales",
-    globalTranslationContext(ctx) {
-        return { first_name: ctx.from?.first_name ?? "" };
-    },
-});
 bot.use(i18n);
 
 bot.use(session({
@@ -31,6 +23,7 @@ bot.use(session({
                     full_name: null,
                 },
                 subscribe_channels:[],
+                selectedCourse:null,
             }
         },
         storage: new MemorySessionStorage(),
@@ -69,8 +62,8 @@ bot.on("my_chat_member", async (ctx) => {
 });
 
 bot.use(async (ctx, next) => {
-    const super_admin_list = [1038293334];
-    const command_list = []
+    const super_admin_list = [];
+    const command_list = [ctx.t('back_main')]
     if (command_list.includes(ctx.message?.text)) {
         const stats = await ctx.conversation.active();
         for (let key of Object.keys(stats)) {

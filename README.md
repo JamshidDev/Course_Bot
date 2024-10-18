@@ -1,1 +1,1 @@
-# Bot_Template-Grammy-JS-
+# Course Telegram bot
