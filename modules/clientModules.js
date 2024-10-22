@@ -64,6 +64,7 @@ async function mainMenuConversation(conversation, ctx){
 
 async function orderCourseConversation(conversation, ctx){
     let data = {
+        menu:ctx.session.session_db.selectedMenu,
         course:ctx.session.session_db.selectedCourse,
         fullName:null,
         phone:null,
@@ -112,6 +113,7 @@ async function orderCourseConversation(conversation, ctx){
     for(let i=0; i<adminList.length; i++){
         let adminId = adminList[i]
         await ctx.api.sendMessage(adminId,ctx.t('order_alert_mg',{
+            menu:data.menu,
             order:data.course,
             fullName:data.fullName,
             phone:data.phone,
@@ -190,6 +192,7 @@ bot.filter(hears("back_main"), async (ctx) => {
 
 
 bot.filter(hears("menu_one"), async (ctx) => {
+    ctx.session.session_db.selectedMenu = ctx.t('menu_one')
     await ctx.reply(`
 ✨ KURSLAR
 
@@ -243,6 +246,7 @@ bot.filter(hears("course_five"), async (ctx) => {
 
 
 bot.filter(hears("menu_two"), async (ctx) => {
+    ctx.session.session_db.selectedMenu = ctx.t('menu_two')
     await ctx.reply(`
 ✨ "TAVBA" MARAFONI
 
@@ -279,6 +283,7 @@ bot.filter(hears("marathon_three"), async (ctx) => {
 
 
 bot.filter(hears("menu_three"), async (ctx) => {
+    ctx.session.session_db.selectedMenu = ctx.t('menu_three')
     await ctx.reply(`
 ✨ SHOGIRDLIK
 
@@ -307,6 +312,7 @@ bot.filter(hears("offline_learn"), async (ctx) => {
 
 
 bot.filter(hears("menu_four"), async (ctx) => {
+    ctx.session.session_db.selectedMenu = ctx.t('menu_four')
     ctx.session.session_db.selectedCourse = ctx.t('menu_four')
     await ctx.reply(ctx.t('consultation_description'),{
         parse_mode: "HTML",

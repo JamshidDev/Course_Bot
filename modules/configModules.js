@@ -24,6 +24,7 @@ bot.use(session({
                 },
                 subscribe_channels:[],
                 selectedCourse:null,
+                selectedMenu:null,
             }
         },
         storage: new MemorySessionStorage(),
