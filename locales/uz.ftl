@@ -176,7 +176,7 @@ course_five_description = <b>O'G'IL BOLALAR UCHUN QUR'ON</b> kursi
 
              💳 Kurs narxi (har bir oy uchun):
              ✅ Individual kurs uchun - 250$ni tashkil qiladi
-             ✅ Guruh bo'lib o'rganuvchilar uchun - 100$ ni tashkil qiladi.- 500 000 so'mni tashkil qiladi.
+             ✅ Guruh bo'lib o'rganuvchilar uchun - 100$ ni tashkil qiladi.
 
 
 
