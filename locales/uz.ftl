@@ -97,7 +97,7 @@ course_two_description = <b>TAFSIR</b> kursi
              ✅ Qur'on tafsirini chuqurroq tafakkur qilasiz.
              ✅ Ilmingiz ziyoda bo'lishligiga va amali solih qilishligingizda yordam beradi.
 
-             ⭐️Unda siz muslimaning axloqi kursimizga qoshilishingiz mumkun
+             ⭐️Unda siz tafsir kursimizga qoshilishingiz mumkun
 
              👥 Darslar guruh bo’lib o’tiladi
 
