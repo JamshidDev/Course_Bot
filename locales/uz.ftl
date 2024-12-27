@@ -310,7 +310,7 @@ online_learn_description = <b>👩‍💻 ONLINE O'QISH</b>
 
              🕑 Vaqti –kelishilgan holda o’tiladi.
 
-             💳 Online rejimidagi darslarimizning (1 oylik to’lov) narxi - 300$ ni tashkil qiladi.
+             💳 Online rejimidagi darslarimizning (1 oylik to’lov) narxi - 400$ ni tashkil qiladi.
 
              Agar siz haqiqatda Rasululloh sollallohu alayhi va sallamning yo'llariga tobe bo'lib yurmoqchi bo'lsangiz demak sizga aynan manashu shogirdlik kursi ya'ni, ustozaning xos shogirtlaridan bo'lishingiz va xos dars olishingiz va ularning tuzib bergan dasturlari asosida taxsil olib borasiz. Kursimizning dastlabki yilda Qur'on va ahloqdan ta'lim olib borasiz. Keyingi yillardan esa umumiy o'laroq tafsir, fiqh, hadis, aqida ilmi o'rgatilib, o'zingizni holatingiz hamda aqliy salohiyatingizga qarab xos ilmlar berib boriladi. Biror ilmda aqliy darajangizda mutaxasislashasiz!
 
